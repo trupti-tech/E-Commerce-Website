@@ -1,0 +1,16 @@
+.categories div{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    padding: 30px;
+    transition: 0.3s;
+}
+.categories div:hover{
+    background-color: #f2f2f2;
+}
+.categories div:hover a{
+    color: #333;
+}
