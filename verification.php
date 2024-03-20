@@ -17,7 +17,13 @@
             $_SESSION['id'] = $result['id'];
             $_SESSION['name'] = $result['name'];
             $_SESSION['email'] = $result['email_id'];
-            header("Location: index.php");
+            
+            if($email == 'admin@gmail.com'){
+                header('Location: dashboard.php');
+            }
+            else{
+                header("Location: index.php");
+            }
         }
         else{
             echo "<script>

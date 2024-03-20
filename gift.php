@@ -18,23 +18,20 @@
 
     ?>
 
-    <!-- Hero Section -->
-    <section class="grid grid-cols-2 bg-center bg-cover bg-no-repeat bg-[url('./uploads/Banners/banner1.jpg')] bg-gray-700 bg-blend-overlay">
+    <section class="grid grid-cols-2 bg-center bg-cover bg-no-repeat bg-[url('./uploads/Banners/banner2.jpg')] bg-gray-700 bg-blend-overlay">
         <div class="px-4 mx-auto py-24 lg:py-40">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                 <?php
-                    $category_g = $_GET['cg'];
-                    if($category_g === 'F'){
-                        echo "Women's Clothing";
-                        $path = './uploads/WC/';
+                    $category = $_GET['c'];
+                    if($category === 'books'){
+                        echo "Popular Books";
+                        $path = './uploads/Books/';
+                        $types = array("ATB", "B");
                     }
-                    elseif($category_g === 'M'){
-                        echo "Men's Clothing";
+                    elseif($category === 'items'){
+                        echo "Popular Gift Items";
                         $path = './uploads/MC/';
-                    }
-                    elseif($category_g === 'K'){
-                        echo "Kid's Fashion";
-                        $path = './uploads/KF/';
+                        $types = array("GC", "GI");
                     }
                 ?>
             </h1>
@@ -60,7 +57,7 @@
                 <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
             </div>
             <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-200/30 group-hover:bg-white/50 dark:group-hover:bg-gray-400/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
                     </svg>
@@ -68,7 +65,7 @@
                 </span>
             </button>
             <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-200/30 group-hover:bg-white/50 dark:group-hover:bg-gray-400/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
                     </svg>
@@ -89,9 +86,7 @@
     <?php
         include 'conn.php';
 
-        $category = $_GET['c'];
-
-        $sql = "SELECT * FROM product WHERE GENDER='$category_g' AND CATEGORY_ID='$category'"; 
+        $sql = "SELECT * FROM product WHERE CATEGORY_ID=5 AND TYPE IN ('$types[0]', '$types[1]')"; 
         $qry_run = $conn->prepare($sql);
         $qry_run->execute();
 
@@ -135,7 +130,7 @@
                 </div>
                 <div class="flex items-center justify-between">
                     <span class="text-3xl font-bold text-gray-900 dark:text-white">₹ <?= $price ?></span>
-                    <a href="./addtocart.php?id=<?php echo $product_id ?>" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
+                    <a href="addtocart.php?id=<?php echo $product_id ?>" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</a>
                 </div>
             </div>
         </div>

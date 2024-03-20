@@ -18,7 +18,6 @@
 
     ?>
 
-
     <!-- Hero Section -->
     <section class="bg-center bg-no-repeat bg-[url('https://flowbite.s3.amazonaws.com/docs/jumbotron/conference.jpg')] bg-gray-700 bg-blend-multiply">
         <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-40">
@@ -37,16 +36,16 @@
                 <a href="fashion.php?cg=K&c=1"><i class="fas fa-child"></i></a>
             </div>
             <div class="rounded-full" title="Food Items">
-                <a href="food.php"><i class="fa-solid fa-utensils"></i></a>
+                <a href="groceries.php?type=Food"><i class="fa-solid fa-utensils"></i></a>
             </div>
             <div class="rounded-full" title="Beverages">
-                <a href="beverages.php"><i class="fas fa-coffee"></i></a>
+                <a href="groceries.php?type=BG"><i class="fas fa-coffee"></i></a>
             </div>
             <div class="rounded-full" title="Electronic Appliances">
-                <a href="smartdevices.php"><i class="fas fa-laptop"></i></a>
+                <a href="devices.php?type=gen"><i class="fas fa-laptop"></i></a>
             </div>
-            <div class="rounded-full" title="Toys">
-                <a href="gift.php?c=toys"><i class="fas fa-gamepad"></i></a>
+            <div class="rounded-full" title="Gaming Laptop">
+                <a href="devices.php?type=Laptop"><i class="fas fa-gamepad"></i></a>
             </div>
             <div class="rounded-full" title="Gift Items and cards">
                 <a href="gift.php?c=items"><i class="fa-solid fa-gifts"></i></a>
@@ -58,12 +57,15 @@
     </section>
 
     <!-- Related Products -->
-    <section class="transition-delay mt-5 ml-5">
+    <section class="transition-delay mt-5 ml-5 mb-5">
         <h1 class="uppercase font-bold text-3xl">
-            <span class="onunderline">Related Products</span>
+            <span class="onunderline">Latest Products</span>
         </h1>
     </section>
 
+    <?php
+        include 'footer.php';
+    ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>

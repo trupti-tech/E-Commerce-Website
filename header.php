@@ -28,24 +28,22 @@
                         <a class="dark:hover:text-white my-1" href="fashion.php?cg=K&c=1">Kid's Fasion</a>
                         <a class="dark:hover:text-white my-1" href="items.php?cg=M&c=">Men's Accessories</a>
                         <a class="dark:hover:text-white my-1" href="witems.php">Women's Accessories</a>
-                        <a class="dark:hover:text-white my-1" href="kitems.php">Kid's Accessories</a>
                     </div>
                 </div>
                 <div class="py-3 pt-5 px-5 border-r-2 border-b-2 border-solid border-gray-500 w-full">
                     <span class="ml-3 text-base uppercase font-bold">Electronics</span>
                     <div class="ml-6 mt-4 items flex flex-col">
-                        <a class="dark:hover:text-white my-1" href="appliances.php">General Appliances</a>
-                        <a class="dark:hover:text-white my-1" href="smartdevices.php">Smart Devices</a>
-                        <a class="dark:hover:text-white my-1" href="phones.php">Smart Phones</a>
+                        <a class="dark:hover:text-white my-1" href="devices.php?type=gen">General Appliances</a>
+                        <a class="dark:hover:text-white my-1" href="devices.php?type=smartd">Smart Devices</a>
+                        <a class="dark:hover:text-white my-1" href="devices.php?type=Laptop">Laptops</a>
                     </div>
                 </div>
                 <div class="py-3 pt-5 px-5 border-r-2 border-b-2 border-solid border-gray-500 w-full">
                     <span class="ml-3 text-base uppercase font-bold">Grocery</span>
                     <div class="ml-6 mt-4 items flex flex-col">
-                        <a class="dark:hover:text-white my-1" href="food.php">Food Items</a>
-                        <a class="dark:hover:text-white my-1" href="ingredients.php">Cooking Ingredients</a>
-                        <a class="dark:hover:text-white my-1" href="beverages.php">Beverages</a>
-                        <a class="dark:hover:text-white my-1" href="chocolates.php">Chocolates</a>
+                        <a class="dark:hover:text-white my-1" href="groceries.php?type=Food">Food Items</a>
+                        <a class="dark:hover:text-white my-1" href="groceries.php?type=BG">Beverages</a>
+                        <a class="dark:hover:text-white my-1" href="groceries.php?type=Sweets">Chocolates</a>
                     </div>
                 </div>
                 <div class="py-3 pt-5 px-5 border-r-2 border-b-2 border-solid border-gray-500 w-full">
@@ -53,8 +51,6 @@
                     <div class="ml-6 mt-4 items flex flex-col">
                         <a class="dark:hover:text-white my-1" href="gift.php?c=items">Gift Items & Cards</a>
                         <a class="dark:hover:text-white my-1" href="gift.php?c=books">Books</a>
-                        <a class="dark:hover:text-white my-1" href="gift.php?c=toys">Toys</a>
-                        <a class="dark:hover:text-white my-1" href="gift.php?c=decoration">Decorations</a>
                     </div>    
                 </div>
             </div>
@@ -77,10 +73,10 @@
                         </div>
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cart</a>
+                                <a href="./cart.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Cart</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
+                                <a href="./orders.php" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
                             </li>
                         </ul>
                         <div class="py-1">

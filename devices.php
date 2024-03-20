@@ -23,19 +23,18 @@
         <div class="px-4 mx-auto py-24 lg:py-40">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                 <?php
-                    $category_g = $_GET['cg'];
-                    if($category_g === 'F'){
-                        echo "Women's Clothing";
-                        $path = './uploads/WC/';
+                    $type = $_GET['type'];
+                    if($type === 'gen'){
+                        echo "General Appliances";
                     }
-                    elseif($category_g === 'M'){
-                        echo "Men's Clothing";
-                        $path = './uploads/MC/';
+                    elseif($type === 'smartd'){
+                        echo "Smart Devices";
                     }
-                    elseif($category_g === 'K'){
-                        echo "Kid's Fashion";
-                        $path = './uploads/KF/';
+                    elseif($type === 'Laptop'){
+                        echo "Latest Laptops";
                     }
+
+                    $path = './uploads/Devices/';
                 ?>
             </h1>
         </div>
@@ -89,9 +88,7 @@
     <?php
         include 'conn.php';
 
-        $category = $_GET['c'];
-
-        $sql = "SELECT * FROM product WHERE GENDER='$category_g' AND CATEGORY_ID='$category'"; 
+        $sql = "SELECT * FROM product WHERE type='$type'"; 
         $qry_run = $conn->prepare($sql);
         $qry_run->execute();
 
@@ -146,6 +143,7 @@
     <?php
         include 'footer.php';
     ?>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>

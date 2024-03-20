@@ -3,15 +3,15 @@
     padding: 0; 
     box-sizing: border-box;
 }
-body{
+body {
     display: flex; 
     justify-content: center; 
     align-items: center;
     min-height: 100vh;
-    background: #03a9f4;
     transition: 0.5s;
     flex-direction: column;
     gap: 100px;
+    background-color: #03a9f4;
 }
 body.active{
     background: #f43648;
