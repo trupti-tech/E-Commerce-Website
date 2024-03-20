@@ -30,8 +30,8 @@
                     }
                     elseif($category === 'items'){
                         echo "Popular Gift Items";
-                        $path = './uploads/MC/';
-                        $types = array("GC", "GI");
+                        $path = './uploads/Gifts/';
+                        $types = array("items", "items");
                     }
                 ?>
             </h1>

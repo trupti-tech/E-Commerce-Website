@@ -4,18 +4,25 @@
 
     $id = $_GET['oid'];
 
-    $sql = "DELETE FROM orders WHERE order_id = $id";
-    $stmt = $conn->prepare($sql);
+    try{
+        $sql = "DELETE FROM orders WHERE order_id = $id AND STATUS <> 'Out for delivery'";
+        $stmt = $conn->exec($sql);
 
-    $result = $stmt->execute();
+        if($stmt){
+            echo "<script>
+                alert('Removed from Orders')
+                window.location.replace('./orders.php')
+                </script>";
+        }
+        else{
+            echo "<script>
+                alert('This order cannot be cancelled, since it is out for delievery')
+                window.location.replace('./orders.php')
+                </script>";
 
-    if($result){
-        echo "<script>
-            alert('Removed from Orders')
-            window.location.replace('./orders.php')
-            </script>";
+        }
     }
-    else{
+    catch(PDOException $e){
         echo "<script>
             alert('Some error occured')
             window.location.replace('./orders.php')
