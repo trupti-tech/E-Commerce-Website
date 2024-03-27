@@ -20,11 +20,12 @@
     <?php
         include 'header.php';
     ?>    
+    <!-- <div class="border-4 border-sky-800 flex justify-center" id="alert"> -->
     <div id="alert">
 
     </div>
 
-    <section class="transition-delay mt-5 ml-12">
+    <section class="text-white transition-delay mt-5 ml-12">
         <h1 class="uppercase font-bold text-3xl">
             <span class="onunderline">Orders</span>
         </h1>
@@ -52,9 +53,9 @@
                         $status = $result['status'];
                         $rating = mt_rand (1*10, 5*10) / 10;
             ?>
-            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full max-w-sm bg-white border border-gray-200 rounded-lg overflow-hidden shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="./product.php?pid=<?= $result['product_id'] ?>">
-                    <img style="aspect-ratio: 3/4;" class="p-8 rounded-t-lg" src="<?php echo $result['image_path'] ?>" alt="product image" />
+                    <img style="aspect-ratio: 3/4;" class="hover:scale-125 transition-all duration-500 p-8 rounded-t-lg" src="<?php echo $result['image_path'] ?>" alt="product image" />
                 </a>
                 <div class="px-5 pb-5">
                     <a href="./product.php?pid=<?= $result['product_id'] ?>">
@@ -116,10 +117,47 @@
                         Status : ${msg}
                     </div>
                 </div>`;
+            // document.getElementById('alert').innerHTML = `
+            // <ul class="timeline pb-5">
+            // <li>
+            //     <div class="timeline-middle">
+            //     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            //     </div>
+            //     <div class="timeline-end timeline-box">Delievered</div>
+            //     <hr class="bg-primary"/>
+            // </li>
+            // <li>
+            //     <hr class="bg-primary"/>
+            //     <div class="timeline-middle">
+            //     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            //     </div>
+            //     <div class="timeline-end timeline-box">Out for delivery</div>
+            //     <hr class="bg-primary"/>
+            // </li>
+            // <li>
+            //     <hr class="bg-primary"/>
+            //     <div class="timeline-middle">
+            //     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-primary"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            //     </div>
+            //     <div class="timeline-end timeline-box">Dispatched</div>
+            //     <hr/>
+            // </li>
+            // <li>
+            //     <hr/>
+            //     <div class="timeline-middle">
+            //     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" /></svg>
+            //     </div>
+            //     <div class="timeline-end timeline-box">Order processing</div>
+            //     <hr/>
+            // </li>
+            // </ul>
+            // `;
             setTimeout(() => {
                 document.getElementById('alert').innerHTML = ``;
-            }, 4000);
+            }, 6000);
         }
     </script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </html>

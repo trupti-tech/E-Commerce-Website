@@ -105,9 +105,9 @@
             $rating = mt_rand (1*10, 5*10) / 10;
 
     ?>
-        <div class="mt-5 ml-5 w-full max-w-sm bg-white border border-gray-200 rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="mt-5 ml-5 w-full max-w-sm bg-white border border-gray-200 overflow-hidden rounded-2xl shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="./product.php?pid=<?= $product_id ?>" class="rounded-2xl">
-                <img style="aspect-ratio: 3/4;" class="p-6" src="<?php echo $image ?>" alt="product image" />
+                <img style="aspect-ratio: 3/4;" class="hover:scale-125 transition-all duration-500 p-6" src="<?php echo $image ?>" alt="product image" />
             </a>
             <div class="px-5 pb-5">
                 <a href="#">

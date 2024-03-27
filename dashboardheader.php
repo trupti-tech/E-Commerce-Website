@@ -8,20 +8,20 @@
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-black mb-4 md:mb-0">
         <img class="drop-shadow-2xl w-11 h-11 rounded-full" id="logo" src="./uploads/logo.png" alt="Logo">
-        <span class="ml-3 text-xl">Trupti Mart</span>
+            <span class="ml-3 text-xl">Trupti Mart</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
         <a class="mr-5 hover:underline uppercase cursor-pointer" href="dashboard.php">Home</a>
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-5 uppercase hover:underline text-black bg-slate-200 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Categories 
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1" class="mr-5 uppercase hover:underline text-black bg-slate-200 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Check Stock 
             <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
         </button>
 
-        <div id="dropdown" class="hidden relative bg-white divide-y divide-gray-100 shadow w-full dark:bg-gray-700">
+        <div id="dropdown1" class="hidden relative bg-white divide-y divide-gray-100 shadow w-full dark:bg-gray-700">
             <div class="text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                 <div class="py-3 pt-5 px-3 w-full">
-                    <span class="ml-3 text-base uppercase font-bold">Categories</span>
+                    <span class="ml-3 text-base uppercase font-bold">Stock</span>
                     <div class="ml-6 mt-4 items flex flex-col">
                         <a class="dark:hover:text-white my-1" href="stock.php?id=1">Clothing</a>
                         <a class="dark:hover:text-white my-1" href="stock.php?id=2">Electronics</a>
@@ -33,6 +33,8 @@
                 </div>
             </div>
         </div>
+        
+        <a class="mr-5 hover:underline uppercase cursor-pointer" href="sales.php">Sales</a>
         </nav>
         
         <?php
