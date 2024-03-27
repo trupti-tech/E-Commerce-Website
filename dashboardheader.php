@@ -4,15 +4,15 @@
 
 ?>
 
-<header class="z-50 text-black bg-slate-100 body-font sticky w-full top-0">
+<header class="glass z-50 text-black bg-slate-100 body-font sticky w-full top-0">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-black mb-4 md:mb-0">
         <img class="drop-shadow-2xl w-11 h-11 rounded-full" id="logo" src="./uploads/logo.png" alt="Logo">
             <span class="ml-3 text-xl">Trupti Mart</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:underline uppercase cursor-pointer" href="dashboard.php">Home</a>
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1" class="mr-5 uppercase hover:underline text-black bg-slate-200 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Check Stock 
+        <a class="mr-5 font-medium uppercase cursor-pointer hover:bg-slate-300 rounded-lg text-sm px-5 py-2.5 hover:text-black" href="dashboard.php">Home</a>
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown1" class="mr-5 uppercase font-medium text-black bg-slate-200 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Check Stock 
             <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
@@ -34,7 +34,7 @@
             </div>
         </div>
         
-        <a class="mr-5 hover:underline uppercase cursor-pointer" href="sales.php">Sales</a>
+        <a class="mr-5 font-medium uppercase cursor-pointer hover:bg-slate-300 rounded-lg text-sm px-5 py-2.5 hover:text-black" href="sales.php">Sales</a>
         </nav>
         
         <?php
@@ -52,10 +52,10 @@
                         </div>
                         <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="avatarButton">
                             <li>
-                                <a href="stock.php?id=0" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Out of stock products</a>
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Add Products</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Orders</a>
+                                <a href="stock.php?id=0" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Out of stock products</a>
                             </li>
                         </ul>
                         <div class="py-1">

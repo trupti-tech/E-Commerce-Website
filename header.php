@@ -4,15 +4,15 @@
 
 ?>
 
-<header class="z-50 text-black bg-slate-100 body-font sticky w-full top-0">
+<header class="glass z-50 text-white body-font sticky w-full top-0">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a class="flex title-font font-medium items-center text-black mb-4 md:mb-0">
         <img class="drop-shadow-2xl w-11 h-11 rounded-full" id="logo" src="./uploads/logo.png" alt="Logo">
-        <span class="ml-3 text-xl">Trupti Mart</span>
+        <span class="text-white ml-3 text-xl">Trupti Mart</span>
         </a>
         <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 uppercase cursor-pointer" href="index.php">Home</a>
-        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-5 uppercase text-black bg-slate-200 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Products 
+        <a class="mr-5 uppercase cursor-pointer hover:bg-slate-300 rounded-lg text-sm px-5 py-2.5 hover:text-black font-medium" href="index.php">Home</a>
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="mr-5 uppercase text-white bg-slate-200 hover:text-black hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center" type="button">Products 
             <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
             </svg>
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <a class="mr-5 uppercase cursor-pointer" href="contact.php">Contact us</a>
+        <a class="mr-5 uppercase cursor-pointer hover:bg-slate-300 rounded-lg text-sm px-5 py-2.5 hover:text-black font-medium" href="contact.php">Contact us</a>
         </nav>
         
         <?php
@@ -64,9 +64,9 @@
                 $username = $_SESSION['name'];
                 $profileLetter = $username[0];
                 echo '
-                    <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class="w-10 h-10 rounded-full cursor-pointer" src="https://dummyimage.com/40x40&text='.$profileLetter.'" alt="User dropdown">
+                    <img id="avatarButton" type="button" data-dropdown-toggle="userDropdown" data-dropdown-placement="bottom-start" class=" w-10 h-10 rounded-full cursor-pointer" src="https://dummyimage.com/40x40&text='.$profileLetter.'" alt="User dropdown">
 
-                    <div id="userDropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-50 dark:bg-gray-700 dark:divide-gray-600">
+                    <div id="userDropdown" class="glass z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-50 dark:bg-gray-700 dark:divide-gray-600">
                         <div class="px-4 py-3 text-sm text-gray-900 dark:text-white">
                             <div>'.$_SESSION['name'].'</div>
                             <div class="font-medium truncate">'.$_SESSION['email'].'</div>
@@ -97,3 +97,5 @@
         ?>
     </div>
     </header>
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
